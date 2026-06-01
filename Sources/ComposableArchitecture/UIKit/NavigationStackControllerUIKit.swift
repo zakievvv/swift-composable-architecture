@@ -1,5 +1,5 @@
 #if canImport(UIKit) && !os(watchOS)
-  import UIKit
+ public import UIKit
 
   extension NavigationStackController {
     /// Drives a navigation stack controller with a store.
