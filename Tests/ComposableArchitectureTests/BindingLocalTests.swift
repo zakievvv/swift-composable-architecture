@@ -1,5 +1,6 @@
 #if DEBUG
   import XCTest
+  import SwiftUI
 
   @testable import ComposableArchitecture
 

@@ -1,6 +1,7 @@
 #if canImport(ComposableArchitectureMacros)
   import ComposableArchitectureMacros
   import MacroTesting
+  import SnapshotTesting
   import SwiftSyntaxMacros
   import SwiftSyntaxMacrosTestSupport
   import XCTest

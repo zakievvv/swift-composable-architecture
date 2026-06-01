@@ -105,17 +105,15 @@ for target in package.targets {
   target.swiftSettings?.append(contentsOf: [
     .enableUpcomingFeature("ExistentialAny"),
     .enableUpcomingFeature("ImmutableWeakCaptures"),
+    .enableUpcomingFeature("MemberImportVisibility"),
   ])
   if target.type == .test {
     target.swiftSettings?.append(contentsOf: [
       .swiftLanguageMode(.v5),
-      .enableExperimentalFeature("StrictConcurrency"),
-      .enableUpcomingFeature("InferSendableFromCaptures"),
     ])
   } else {
     target.swiftSettings?.append(contentsOf: [
       .enableUpcomingFeature("InternalImportsByDefault"),
-      .enableUpcomingFeature("MemberImportVisibility"),
     ])
   }
   #if compiler(>=6.4)

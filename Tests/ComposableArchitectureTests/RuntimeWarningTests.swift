@@ -1,6 +1,7 @@
 #if DEBUG
   import Combine
   @_spi(Internals) import ComposableArchitecture
+  import SwiftUI
   import XCTest
 
   final class RuntimeWarningTests: BaseTCATestCase {
