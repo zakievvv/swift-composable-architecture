@@ -1,13 +1,13 @@
-@_spi(Reflection) import CasePaths
+@_spi(Reflection) public import CasePaths
 
 #if canImport(Combine)
-  @preconcurrency import Combine
+  @preconcurrency public import Combine
 #endif
 #if canImport(SwiftUI)
-  import SwiftUI
+  public import SwiftUI
 #endif
 #if canImport(UIKit)
-  import UIKit
+  public import UIKit
 #endif
 
 // NB: Deprecated with 1.25.0:

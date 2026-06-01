@@ -1,4 +1,4 @@
-import Foundation
+public import Foundation
 
 extension UnsafeMutablePointer<os_unfair_lock_s> {
   @inlinable @discardableResult

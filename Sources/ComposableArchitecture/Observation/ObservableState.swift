@@ -1,4 +1,4 @@
-import Foundation
+public import Foundation
 
 /// A type that emits notifications to observers when underlying data changes.
 ///

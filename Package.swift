@@ -103,14 +103,24 @@ let package = Package(
 for target in package.targets {
   target.swiftSettings = target.swiftSettings ?? []
   target.swiftSettings?.append(contentsOf: [
-    .enableUpcomingFeature("ExistentialAny")
+    .enableUpcomingFeature("ExistentialAny"),
+    .enableUpcomingFeature("ImmutableWeakCaptures"),
   ])
-}
-
-for target in package.targets where target.type == .system || target.type == .test {
-  target.swiftSettings?.append(contentsOf: [
-    .swiftLanguageMode(.v5),
-    .enableExperimentalFeature("StrictConcurrency"),
-    .enableUpcomingFeature("InferSendableFromCaptures"),
-  ])
+  if target.type == .test {
+    target.swiftSettings?.append(contentsOf: [
+      .swiftLanguageMode(.v5),
+      .enableExperimentalFeature("StrictConcurrency"),
+      .enableUpcomingFeature("InferSendableFromCaptures"),
+    ])
+  } else {
+    target.swiftSettings?.append(contentsOf: [
+      .enableUpcomingFeature("InternalImportsByDefault"),
+      .enableUpcomingFeature("MemberImportVisibility"),
+    ])
+  }
+  #if compiler(>=6.4)
+    target.swiftSettings?.append(contentsOf: [
+      .treatAllWarnings(as: .error)
+    ])
+  #endif
 }

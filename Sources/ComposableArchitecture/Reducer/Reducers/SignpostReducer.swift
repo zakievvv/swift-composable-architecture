@@ -1,4 +1,5 @@
-import OSLog
+import Combine
+public import OSLog
 
 extension Reducer {
   /// Instruments a reducer with

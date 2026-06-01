@@ -1,4 +1,4 @@
-import Combine
+public import Combine
 
 extension Effect {
   /// Creates an effect from a Combine publisher.

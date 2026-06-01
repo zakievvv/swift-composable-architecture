@@ -1,5 +1,5 @@
-import Foundation
-import OrderedCollections
+public import Foundation
+public import OrderedCollections
 
 @inlinable
 func areOrderedSetsDuplicates<T>(_ lhs: OrderedSet<T>, _ rhs: OrderedSet<T>) -> Bool {

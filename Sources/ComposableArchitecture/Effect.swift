@@ -1,6 +1,6 @@
-@preconcurrency import Combine
+@preconcurrency public import Combine
 import Foundation
-import SwiftUI
+public import SwiftUI
 
 public struct Effect<Action>: Sendable {
   @usableFromInline

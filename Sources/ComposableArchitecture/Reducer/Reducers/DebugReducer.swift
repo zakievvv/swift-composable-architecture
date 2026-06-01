@@ -1,5 +1,5 @@
 import Combine
-import Dispatch
+public import Dispatch
 @_spi(SharedChangeTracking) import Sharing
 
 extension Reducer {

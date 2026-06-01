@@ -1,4 +1,4 @@
-import SwiftUI
+public import SwiftUI
 
 #if canImport(Observation)
   import Observation

@@ -1,9 +1,9 @@
 import SwiftDiagnostics
 import SwiftOperators
-import SwiftSyntax
+public import SwiftSyntax
 import SwiftSyntaxBuilder
 import SwiftSyntaxMacroExpansion
-import SwiftSyntaxMacros
+public import SwiftSyntaxMacros
 
 public enum PresentsMacro {
 }

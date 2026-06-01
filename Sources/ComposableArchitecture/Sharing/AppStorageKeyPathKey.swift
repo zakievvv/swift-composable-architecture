@@ -1,5 +1,5 @@
 import Dependencies
-import Foundation
+public import Foundation
 
 extension SharedReaderKey {
   /// Creates a persistence key for sharing data in user defaults given a key path.

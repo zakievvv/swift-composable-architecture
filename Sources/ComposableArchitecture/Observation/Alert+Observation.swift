@@ -1,4 +1,4 @@
-import SwiftUI
+public import SwiftUI
 
 extension View {
   /// Presents an alert when a piece of optional state held in a store becomes non-`nil`.

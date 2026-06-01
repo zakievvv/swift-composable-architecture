@@ -1,4 +1,4 @@
-import SwiftUI
+public import SwiftUI
 
 extension DependencyValues {
   /// An effect that dismisses the current presentation.

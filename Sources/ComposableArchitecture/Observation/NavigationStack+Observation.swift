@@ -1,4 +1,5 @@
-import SwiftUI
+import OrderedCollections
+public import SwiftUI
 
 extension Binding {
   /// Derives a binding to a store focused on ``StackState`` and ``StackAction``.

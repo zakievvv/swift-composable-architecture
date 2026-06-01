@@ -1,7 +1,7 @@
-import Combine
+public import Combine
 import CombineSchedulers
-import Foundation
-import SwiftUI
+public import Foundation
+public import SwiftUI
 
 /// A store represents the runtime that powers the application. It is the object that you will pass
 /// around to views so that you can read feature state and send user actions.

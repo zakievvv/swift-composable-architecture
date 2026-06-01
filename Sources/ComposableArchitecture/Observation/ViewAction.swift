@@ -1,4 +1,4 @@
-import SwiftUI
+public import SwiftUI
 
 /// Defines the actions that can be sent from a view.
 ///
