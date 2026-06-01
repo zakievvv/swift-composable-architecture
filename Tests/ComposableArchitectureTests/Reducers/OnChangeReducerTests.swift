@@ -1,4 +1,5 @@
 import ComposableArchitecture
+import OrderedCollections
 import XCTest
 
 @available(*, deprecated, message: "TODO: Update to use case pathable syntax")
