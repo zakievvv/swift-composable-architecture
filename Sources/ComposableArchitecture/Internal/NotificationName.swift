@@ -23,8 +23,16 @@ public var willResignNotificationName: Notification.Name? {
   #endif
 }
 
+// The original `let = { ... }()` form runs the closure at module-init
+// time on a nonisolated context. Swift 6.4 (Xcode 27) rejects that on
+// watchOS because `WKExtension.applicationWillEnterForegroundNotification`
+// is `@MainActor`-isolated:
+//   error: main actor-isolated default value in a nonisolated context
+// Convert to computed properties (matching `willResignNotificationName`'s
+// pattern above) so each access opens its own evaluation context where
+// the actor isolation requirement can be satisfied or elided.
 @_spi(Internals)
-public let willEnterForegroundNotificationName: Notification.Name? = {
+public var willEnterForegroundNotificationName: Notification.Name? {
   #if os(iOS) || os(tvOS) || os(visionOS)
     return UIApplication.willEnterForegroundNotification
   #elseif os(macOS)
@@ -34,10 +42,10 @@ public let willEnterForegroundNotificationName: Notification.Name? = {
   #else
     return nil
   #endif
-}()
+}
 
 @_spi(Internals)
-public let willTerminateNotificationName: Notification.Name? = {
+public var willTerminateNotificationName: Notification.Name? {
   #if os(iOS) || os(tvOS) || os(visionOS)
     return UIApplication.willTerminateNotification
   #elseif os(macOS)
@@ -45,7 +53,7 @@ public let willTerminateNotificationName: Notification.Name? = {
   #else
     return nil
   #endif
-}()
+}
 
 var canListenForResignActive: Bool {
   willResignNotificationName != nil
