@@ -1,3 +1,31 @@
+> ## FlowPulse-owned fork
+>
+> This is **not** the upstream `pointfreeco/swift-composable-architecture` repository.
+>
+> [@zakievvv](https://github.com/zakievvv) maintains this fork solely to
+> keep the [FlowPulse](https://github.com/zakievvv/FlowPulse) iOS / macOS /
+> watchOS / tvOS / visionOS app building under **Xcode 27 beta 1 +
+> Swift 6.4**, by patching a specific compile error that upstream's own
+> Xcode 27 PRs did not address.
+>
+> **Full rationale, verification, patch description, and retirement
+> conditions:** [https://github.com/zakievvv/swift-composable-architecture/issues/1](https://github.com/zakievvv/swift-composable-architecture/issues/1)
+>
+> The patch lives on branch
+> [`flowpulse-xcode-27-notification-mainactor`](../../tree/flowpulse-xcode-27-notification-mainactor) at commit
+> [`cb3b2eef`](../../commit/cb3b2eef42d66dac10b64dbfbe717664ff6e88c4).
+>
+> FlowPulse consumes this fork transparently via SwiftPM mirror
+> configuration. If you found this repo by accident and you're not
+> working on FlowPulse, you almost certainly want **the upstream**:
+> [`pointfreeco/swift-composable-architecture`](https://github.com/pointfreeco/swift-composable-architecture).
+>
+> **No issues or PRs will be opened on `pointfreeco/swift-composable-architecture` as part of this
+> work** — this fork is a self-contained, `zakievvv/*`-scoped workaround,
+> not a fix that's being negotiated upstream.
+
+---
+
 # The Composable Architecture
 
 [![CI](https://github.com/pointfreeco/swift-composable-architecture/actions/workflows/ci.yml/badge.svg)](https://github.com/pointfreeco/swift-composable-architecture/actions/workflows/ci.yml)
